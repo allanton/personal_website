@@ -14,6 +14,7 @@
   "description": "",
   "dependencies": {
     "@heroicons/react": "^2.1.1",
+    "framer-motion": "^12.4.7",
     "next": "^14.1.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
