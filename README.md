@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+format this as below pls:
+
+
+Let's create a README.md file in the root directory to document the project:
+
+```markdown
+# Personal Portfolio Website
+
+A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+
+## Project Structure
+
+```
+├── frontend/           # Frontend application
+│   ├── src/
+│   │   ├── components/ # Reusable React components
+│   │   ├── pages/     # Next.js pages
+│   │   ├── styles/    # Global styles
+│   │   └── utils/     # Utility functions
+│   ├── public/        # Static assets
+│   └── ...
+└── README.md
+```
+
+## Features
+
+- 🌓 Dark/Light theme support
+- 📱 Responsive design
+- 🎨 Modern UI with Tailwind CSS
+- 🔍 SEO friendly
+- 📝 Easy to customize and extend
+- 🚀 Fast performance with Next.js
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+cd frontend
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+- Update `frontend/src/components/layout/Navbar.tsx` to change navigation items
+- Modify theme colors in `frontend/tailwind.config.ts`
+- Add new pages in `frontend/src/pages/`
+- Customize components in `frontend/src/components/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
