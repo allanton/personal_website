@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-paper-50 dark:bg-gray-900">
       <Navbar />
       <main className="container mx-auto px-4 pt-28 pb-16">
         <div className="max-w-4xl mx-auto">
@@ -23,7 +23,7 @@ export default function Home() {
                   href="https://github.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-light-500 dark:hover:text-primary-dark-400"
                 >
                   <FaGithub className="h-6 w-6" />
                 </a>
@@ -31,7 +31,7 @@ export default function Home() {
                   href="https://linkedin.com/in/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-light-500 dark:hover:text-primary-dark-400"
                 >
                   <FaLinkedin className="h-6 w-6" />
                 </a>
@@ -39,15 +39,15 @@ export default function Home() {
                   href="https://twitter.com/yourusername"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-light-500 dark:hover:text-primary-dark-400"
                 >
                   <FaTwitter className="h-6 w-6" />
                 </a>
               </div>
             </div>
-            <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden">
+            <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden bg-paper-100 dark:bg-gray-800">
               {/* Replace with your image */}
-              <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400 dark:text-gray-500">
+              <div className="absolute inset-0 flex items-center justify-center text-gray-400 dark:text-gray-500">
                 Add your photo here
               </div>
             </div>

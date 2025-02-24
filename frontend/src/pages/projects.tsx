@@ -19,7 +19,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-paper-50 dark:bg-gray-900">
       <Navbar />
       <main className="container mx-auto px-4 pt-28 pb-16">
         <div className="max-w-4xl mx-auto">
@@ -30,7 +30,7 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+                className="bg-paper-100 dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
               >
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {project.title}
@@ -42,7 +42,7 @@ export default function Projects() {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded text-sm"
+                      className="px-2 py-1 bg-primary-light-100 dark:bg-primary-dark-900/40 text-primary-light-700 dark:text-primary-dark-300 rounded text-sm"
                     >
                       {tag}
                     </span>
@@ -52,7 +52,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary-600 dark:text-primary-400 hover:underline"
+                  className="text-primary-light-600 dark:text-primary-dark-400 hover:underline"
                 >
                   View Project →
                 </a>

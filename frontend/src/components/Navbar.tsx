@@ -23,19 +23,19 @@ export default function Navbar() {
     <>
       <nav className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
         <div className="relative">
-          <div className="flex items-center backdrop-blur-md bg-white/60 dark:bg-gray-800/60 rounded-full px-4 py-1.5 shadow-sm">
+          <div className="flex items-center backdrop-blur-md bg-paper-100/80 dark:bg-gray-800/60 rounded-full px-4 py-1.5 shadow-sm">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 className={`relative px-3 py-1 text-sm transition-colors ${
                   router.pathname === item.href
-                    ? 'text-gray-900 dark:text-white'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                    ? 'text-primary-light-600 dark:text-primary-dark-400'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-primary-light-500 dark:hover:text-primary-dark-400'
                 }`}
               >
                 {router.pathname === item.href && (
-                  <span className="absolute inset-0 rounded-full bg-primary-100 dark:bg-primary-900/40 -z-10" />
+                  <span className="absolute inset-0 rounded-full bg-primary-light-100 dark:bg-primary-dark-900/40 -z-10" />
                 )}
                 {item.name}
               </Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
       
       <button
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        className="fixed top-6 right-6 p-2 rounded-full backdrop-blur-md bg-white/60 dark:bg-gray-800/60 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none shadow-sm"
+        className="fixed top-6 right-6 p-2 rounded-full backdrop-blur-md bg-paper-100/80 dark:bg-gray-800/60 text-gray-500 dark:text-gray-400 hover:text-primary-light-500 dark:hover:text-primary-dark-400 focus:outline-none shadow-sm"
       >
         {theme === 'dark' ? (
           <SunIcon className="h-4 w-4" />
