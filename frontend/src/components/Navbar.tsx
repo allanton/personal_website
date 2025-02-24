@@ -8,7 +8,6 @@ const navigation = [
   { name: 'About', href: '/' },
   { name: 'Projects', href: '/projects' },
   { name: 'Papers', href: '/papers' },
-  { name: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -21,45 +20,40 @@ export default function Navbar() {
   if (!mounted) return null;
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-                Your Name
+    <>
+      <nav className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
+        <div className="relative">
+          <div className="flex items-center backdrop-blur-md bg-white/60 dark:bg-gray-800/60 rounded-full px-4 py-1.5 shadow-sm">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`relative px-3 py-1 text-sm transition-colors ${
+                  router.pathname === item.href
+                    ? 'text-gray-900 dark:text-white'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                }`}
+              >
+                {router.pathname === item.href && (
+                  <span className="absolute inset-0 rounded-full bg-primary-100 dark:bg-primary-900/40 -z-10" />
+                )}
+                {item.name}
               </Link>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`${
-                    router.pathname === item.href
-                      ? 'border-primary-500 text-gray-900 dark:text-white'
-                      : 'border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700'
-                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-          <div className="flex items-center">
-            <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none"
-            >
-              {theme === 'dark' ? (
-                <SunIcon className="h-6 w-6" />
-              ) : (
-                <MoonIcon className="h-6 w-6" />
-              )}
-            </button>
+            ))}
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      
+      <button
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+        className="fixed top-6 right-6 p-2 rounded-full backdrop-blur-md bg-white/60 dark:bg-gray-800/60 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white focus:outline-none shadow-sm"
+      >
+        {theme === 'dark' ? (
+          <SunIcon className="h-4 w-4" />
+        ) : (
+          <MoonIcon className="h-4 w-4" />
+        )}
+      </button>
+    </>
   );
 } 
