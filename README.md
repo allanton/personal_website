@@ -1,9 +1,4 @@
-format this as below pls:
 
-
-Let's create a README.md file in the root directory to document the project:
-
-```markdown
 # Personal Portfolio Website
 
 A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS.
@@ -65,9 +60,5 @@ npm run dev
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React](https://reactjs.org/)
 
-## License
-
-MIT
-```
 
 
